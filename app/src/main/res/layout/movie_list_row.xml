@@ -11,9 +11,19 @@
     android:background="?android:attr/selectableItemBackground"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/image_view_poster"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"/>
+
+
     <TextView
         android:id="@+id/title"
+        android:text="Movie Title"
         android:textColor="@color/title"
+        android:layout_toRightOf="@id/image_view_poster"
+        android:layout_toEndOf="@id/image_view_poster"
         android:textSize="16dp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
@@ -22,6 +32,9 @@
 
     <TextView
         android:id="@+id/genre"
+        android:text="Horror"
+        android:layout_toRightOf="@id/image_view_poster"
+        android:layout_toEndOf="@id/image_view_poster"
         android:layout_below="@id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
