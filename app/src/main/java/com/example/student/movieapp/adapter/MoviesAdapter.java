@@ -59,7 +59,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         holder.genre.setText(movie.getOverview());
         holder.year.setText(movie.getReleaseDate());
 
-        Glide.with(context).load("http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg")
+        Glide.with(context).load("http://image.tmdb.org/t/p/w500")
                 .into(holder.posterImageView);
     }
 
