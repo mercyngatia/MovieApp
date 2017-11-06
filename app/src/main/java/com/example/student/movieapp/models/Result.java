@@ -1,6 +1,8 @@
 
 package com.example.student.movieapp.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,7 @@ public class Result {
     private Double voteAverage;
     private String title;
     private Double popularity;
+    @SerializedName("poster_path")
     private String posterPath;
     private String originalLanguage;
     private String originalTitle;

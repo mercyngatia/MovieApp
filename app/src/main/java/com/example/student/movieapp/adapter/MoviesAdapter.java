@@ -28,6 +28,9 @@ import java.util.List;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
 
+//    private List<Result> moviesList;
+//    Private String posterPath = "image.tmdb.org/t/pw500";
+
     private Context mContext;
     private List<Movie> moviesList;
 
@@ -41,7 +44,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()) //fills the layout
                 .inflate(R.layout.movie_card, viewGroup, false); //what layout are you inflating
-        return new MyViewHolder(view);
+    return new MyViewHolder(view);
     }
 
     @Override
@@ -50,12 +53,19 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         String vote =Double.toString(moviesList.get(i).getVoteAverage());
         viewHolder.userrating.setText(vote);
 
+// use glide to show images
 
         Glide.with(mContext)
                 .load(moviesList.get(i).getPosterPath())
-//               .placeholder(R.drawable.load);
-                  .into(viewHolder.thumbnail);
+//              .placeholder(R.drawable.load);
+                .into(viewHolder.thumbnail);
 
+        //Add onClickListener
+
+//        Glide.with(mContext)
+//                .load(posterpath+movie.getPosterPath())
+//                .into(holder.posterImageView);
+//
 
     }
 
